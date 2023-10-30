@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@1,200&family=Pixelify+Sans&display");
 
 * {
     margin: 0; padding: 0;
@@ -7,8 +7,8 @@
     list-style: none;
 }
 body{
-    font-family: 'Pixelify Sans', sans-serif;
-    background-color: #FF4646;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #ff0000;
 }
 
 img {
@@ -21,7 +21,7 @@ img {
 }
 
 header {
-    background-image: url(https://fs-prod-cdn.nintendo-europe.com/media/images/08_content_images/news_5/2020_5/may_8/wallpapers/mario_kart_8_deluxe/Mario_Kart_8_Deluxe_1_image912w.jpg);
+    background-image: url(https://images6.alphacoders.com/860/860645.png);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -47,6 +47,7 @@ header {
     font-size: 25px;
     font-weight: 800;
     text-transform: uppercase;
+
 }
 
 #menu {
@@ -54,7 +55,7 @@ header {
 }
 
 .menu-icono {
-    width: 25px;
+    width: 100px;
 }
 
 .menu label {
@@ -78,12 +79,12 @@ header {
 }
 
 .header-txt span {
-    color: #FF5A2C;
+    color: #FE0016;
 }
 
 .header-txt p {
     font-size: 17px;
-    color: #E0E0E0;
+    color: #FFFFFF;
     margin-bottom: 45px;
 }
 
@@ -96,17 +97,17 @@ header {
 .btn-3 {
     display: inline-block;
     padding: 11px 35px;
-    border: 2px solid #FF5A2C; 
+    border: 2px solid #ff0000; 
     border-radius: 25px;
     margin-right: 25px;
     font-size: 17px;
     color: #FFFFFF;
-    background-color: #FF5A2C;
+    background-color: #E5192B;
     text-decoration: none; 
 }
 
 .btn-1:hover {
-    background-color: #FF5A2C;
+    background-color: #B71422;
 }
 
 .popular {
@@ -162,7 +163,7 @@ h3 {
 
 .btn-2 {
     padding: 5px 25px; 
-    background-color: #FF5A2C;
+    background-color: #fe0016;
     margin-right: 0;
     color: #FFFFFF; 
 }
@@ -201,7 +202,7 @@ input {
 }
 
 .btn-3 {
-    background-color: #FF5A2C;
+    background-color: #f71616;
     cursor: pointer;
     margin-right: 0;
 }
@@ -227,24 +228,9 @@ input {
     color: #FF5A2C;
 }
 
-.responsivemenu{
-display: flex;
-flex-direction: column;
-padding: 1rem;
-align-items: center;
-
-}
-
-
-#itemmenu{
-    padding: 1rem;
-    align-items: center;
-}
-
 @media (max-width: 991px) {
     .menu {
         padding: 20px;
-        
     }
 
     .menu label {
@@ -256,7 +242,7 @@ align-items: center;
         top: 100%;
         left: 0;
         right: 0;
-        background-color: #FF5A2C; 
+        background-color: #B71422; 
         display: none;
     }
 
@@ -266,7 +252,6 @@ align-items: center;
 
     .menu .navbar ul li {
         width: 100%;
-        
     }
 
 #menu:checked ~ .navbar {
