@@ -3,9 +3,52 @@
     box-sizing:border-box
 }
 
+/*Comienza el grid*/
+section{
+    display:grid;/*grid display*/
+    grid-template-columns:repeat(12, 1fr);/*columnas*/
+    grid-auto-rows: auto;/*lineas*/
+    grid: 3rem;}/**/
+section>header{
+    grid-column:span 12;}
+main>{
+    grid-column: span 12;
+}
+
+@media (min-width: 1024.1px) {
+    main{
+    width:100%;
+    grid-column:span 12;
+    gap: 1rem;
+    padding: 0.6rem;
+}}
+
+section>footer{
+    grid-column:span 12}
+/*Termina el grid*/
+
 
 body{
     background-color: #112731
-    ;
+}
+
+header{
+    background-image: url(https://wallpapers.com/images/hd/hd-black-and-white-gaming-controllers-sayxci5lxop3iwql.jpg)no-repeat;
+    background-size:cover;
+    background-position: center;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav>a{
+    text-decoration: none;
+    margin-right: 50px;
+}
+
+main{       
+    display: flex ;
 }
 
