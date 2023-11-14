@@ -33,14 +33,23 @@ body{
 }
 
 header{
-    background-image: url(https://wallpapers.com/images/hd/hd-black-and-white-gaming-controllers-sayxci5lxop3iwql.jpg)no-repeat;
-    background-size:cover;
-    background-position: center;
-    min-height: 100vh;
+    background-image: url(https://wallpapers.com/images/hd/hd-black-and-white-gaming-controllers-sayxci5lxop3iwql.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 60vh;
+}
 
+nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+}
+nav>ul>li{
+    display: inline-block;
+    padding: 0px 20px;
+
 }
 
 nav>a{
