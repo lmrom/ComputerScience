@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Index</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="styles\home.css">
+        <title>Index</title>
     </head>
 
     <body>
@@ -14,6 +14,7 @@
         <header>
 
             <div class="navbar">
+
                 <div class="logo"><a href="#">Videog's</a></div>
                 <ul class="links">
                     <li><a href="Index.html">Home</a></li>
@@ -21,14 +22,13 @@
                     <li><a href="nintendo1.html">Nintendo</a></li>
                     <li><a href="aus.html">About us</a></li>
                 </ul>
-
                 <div class="toggle_btn">
                     <i class="fa-solid fa-bars"></i>
                 </div>
 
             </div>
 
-            <div class="dropdown-menu">
+            <div class="dropdown_menu">
                 <li><a href="Index.html">Home</a></li>
                 <li><a href="xbox.html">Xbox</a></li>
                 <li><a href="nintendo1.html">Nintendo</a></li>
@@ -36,7 +36,29 @@
             </div>
 
         </header>
+
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+                
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-times'
+                : 'fa-solid fa-bars'
+            }
+        </script>
+
+
+        <main>
+
+            
+        </main>
         
     </body>
 
-</html> 
+</html>

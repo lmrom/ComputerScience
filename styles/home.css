@@ -2,14 +2,16 @@
     margin: 0; 
     padding: 0;
     box-sizing: border-box;
-    font-family:'Open Sans', sans-serif;}
+    font-family:'Open Sans', sans-serif;
+}
 
 body{
     height: 100vh;
-    background-color: black;
-    background-image: url();
+    background-color: white;
+    background-image: url(https://wallpaperaccess.com/full/1306995.png);
     background-size: cover;
-    background-position: center;}
+    background-position: center;
+}
 
 li{
     list-style: none;
@@ -22,13 +24,16 @@ a{
 }
 
 a:hover{
-    text-decoration: underline;
-    text-decoration-thickness: 2px;
-    text-decoration-opacity: 10% }
+    color: orange;
+}
 
-header{
+header {
     position: relative;
-    padding:0 2rem ;}
+    padding:0 2rem 
+    background-color: black;
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.01);
+}
 
 .navbar{
     width: 100%;
@@ -38,11 +43,14 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    }
+    
+}
 
 .navbar .logo a{
+    padding-left: 10px;
     font-size: 1.5rem;
-    font-weight: bold;}
+    font-weight: bold;
+}
 
 .navbar .links{
     display: flex;
@@ -53,29 +61,56 @@ header{
     color:white;
     font-size: 1.5rem;
     cursor: pointer;
-    display: none;}
+    display: none;
+}
 
-@media(max-width: 992px){
+
+@media(max-width: 1024px){
     .navbar .links{
-        display: none;}
+        display: none;
+    }
     .navbar .toggle_btn{
         display: block;
     }
-    .dropdown-menu{display:blockee;}}
+    .dropdown_menu{
+        display:block;
+    }
+}
 
-.dropdown-menu{
+.dropdown_menu{
     display: none;
     position: absolute;
     right: 2rem;
     top:60px;
+    max-height: 0;
     width: 300px;
-    background: rgb(255, 255, 255 0.1);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(15px);
     border-radius: 10px;
-    overflow: hidden;}
+    overflow: hidden;
+    transition: max-height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-.dropdown-menu li{
+.dropdown_menu.open{
+    max-height: 240px;
+    display: block;
+}
+
+.dropdown_menu li{
     padding: 0.7rem;
     display: flex;
     align-items: center;
-    justify-content: center;}
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 576px){
+    .dropdown_menu{
+      left: 2rem;
+      width: unset;
+    }}
