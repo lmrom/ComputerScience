@@ -11,14 +11,20 @@ html{scroll-behavior: smooth;
 
 body{
   background-color: #19171c;}
+
 .navbar{
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 60px;
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;}
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.01);
+  border-radius: 6px;
+  top: 0;
+  z-index: 1;
+}
 
 .navbar .logo a{
   padding-left: 10px;
@@ -58,10 +64,12 @@ header{
   background-size: cover;
   height: 100vh;
   width:100%;
+  background-position: center;
+  width:100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
+  justify-content: center;}
+
 #container h1{
   color: #edf2f4;
   animation-name: glow ;
@@ -72,6 +80,13 @@ header>h3{
   position:absolute;
   top: 40vw;
   padding-left: 20rem;}
+
+#container2 button{
+  position: absolute;
+  bottom: 2%;
+  right: 50%;
+  left: 50%;
+}
 
 .dropdown_menu{
     display: none;
@@ -130,7 +145,7 @@ header>h3{
     background: linear-gradient(90deg,#7d86e5,#724683,#7d86e5,#82f1ca);
     background-size: 300%;
     border-radius: 30px;
-    z-index: 1;}
+    z-index: 0;}
   button:hover {
     animation: ani 8s linear infinite;
     border: none;}
@@ -311,19 +326,28 @@ header>h3{
     width: unset;}
 
 
-footer{
+.flinks{
   display: flex ;
   text-align: center;
   justify-content: space-between;
   padding: 100px;
-  size: 1.3rem;}
+  size: 1.3rem;
+  list-style: none;
+}
 
 #container{
   display: flex;
   flex-direction: column;
   width: 100vw;
   height: 100vh;
+  
 }
 #btn-scroll{
   align-self: center;
 }
+
+
+button {
+  position: absolute;
+  bottom: 2%;
+ }
