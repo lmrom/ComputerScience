@@ -65,7 +65,11 @@ header {
 
     .navbar .logo a{
         padding-left: 2rem;
-    }}
+    }
+
+    
+          
+    }
 
 .dropdown_menu{
     display: none;
@@ -112,11 +116,88 @@ header {
     align-items: center;
     justify-content: center;}
 .main2{
-    height: 100vh;
     width:100%;
-    background-color:#bd2f2f;
-    padding: 4rem 0 0 0;
+    background-color:#131212;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
 }
+
+.main2 h1{
+    position:static;
+    right: 50%;
+}
+
+.container1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  gap: 10px;
+
+  > div {
+    flex: 0 0 40vh;
+    border-radius: 0.5rem;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    box-shadow: 1px 5px 15px #0d4a70;
+    position: relative;
+    overflow: hidden;
+
+    &:nth-of-type(1) {
+      background: url("https://i.pinimg.com/564x/3c/cf/ab/3ccfabe04c54ca07983030092dd570ff.jpg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(2) {
+      background: url("https://i.pinimg.com/564x/44/67/91/4467919cb9ac7e797ea23fa45ad9f625.jpg")
+        no-repeat 50% / cover;
+    }
+    &:nth-of-type(3) {
+      background: url("https://i.pinimg.com/564x/db/b5/d5/dbb5d5b5d18c0d34a3ce102e7e8b02d4.jpg")
+        no-repeat 50% / cover;
+    }
+
+    .content {
+      font-size: 1.5rem;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      opacity: 0;
+      flex-direction: column;
+      height: 100%;
+      justify-content: flex-end;
+      background: rgb(2, 2, 46);
+      background: linear-gradient(
+        0deg,
+        rgba(0, 134, 187, 0.676) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
+      transform: translatey(100%);
+      transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
+      visibility: hidden;
+
+      span {
+        display: block;
+        margin-top: 5px;
+        font-size: 1.2rem;
+      }
+    }
+
+    &:hover {
+      flex: 0 0 500px;
+      box-shadow: 1px 3px 15px #45bbd8;
+      transform: translatey(-30px);
+    }
+
+    &:hover .content {
+      opacity: 1;
+      transform: translatey(0%);
+      visibility: visible;
+    }
+  }
+}
+
+
 
     
 button {
