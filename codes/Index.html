@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="../styles/home.css">
+        <title>Index</title>
+    </head>
+
+    <body>
+
+        <header>
+
+            <div class="navbar">
+
+                <div class="logo"><a href="#">Videog's</a></div>
+                <ul class="links">
+                    <li><a href="Index.html">Home</a></li>
+                    <li><a href="xbox.html">Xbox</a></li>
+                    <li><a href="nintendo1.html">Nintendo</a></li>
+                    <li><a href="aus.html">About us</a></li>
+                </ul>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+            </div>
+
+            <div class="dropdown_menu">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="xbox.html">Xbox</a></li>
+                <li><a href="nintendo1.html">Nintendo</a></li>
+                <li><a href="aus.html">About us</a></li>
+            </div>
+
+        </header>
+
+
+        <script>
+
+          const toggleBtn = document.querySelector('.toggle_btn')
+          const toggleBtnIcon = document.querySelector('.toggle_btn i')
+          const dropDownMenu = document.querySelector('.dropdown_menu')
+
+          toggleBtn.onclick = function () {
+              dropDownMenu.classList.toggle('open')
+              const isOpen = dropDownMenu.classList.contains('open')
+                
+          toggleBtnIcon.classList = isOpen
+              ? 'fa-solid fa-times'
+              : 'fa-solid fa-bars'
+            }
+  
+        </script>
+
+
+        <main>
+
+
+            <div class="main1">
+                <a href="#jj"><button><span><i class="fa-solid fa-arrow-down"></i></button></a>
+            </div>
+
+            <div></div>
+
+            <div class="main2" id="jj">
+
+              <div class="mtext">
+                <h1>Contents</h1>
+                <span>
+                  In this page you will find exclusive games you can search for them and buy them here...
+                </span>
+              </div>
+
+              <div class="container1" id="cont">
+                <div>
+                  <a href="../codes/nintendo1.html">
+                  <div class="content">
+                    <h2>Nintendo</h2>
+                    <span>Buy Games</span>
+                  </div>
+                  </a>
+                </div>
+
+                <div>
+                  <a href="../codes/xbox.html">
+                  <div class="content">
+                    <h2>Xbox</h2>
+                    <span>Buy Games</span>
+                  </div>
+                  </a>
+                </div>
+
+                <div>
+                  <a href="../codes/aus.html">
+                  <div class="content">
+                    <h2>About us</h2>
+                    <span>Page info</span>
+                  </div>
+                </a>
+                </div>
+              </div>
+
+
+              <div id="textooo">
+
+                <h3>
+                  "Step into the world of gaming with our website! Unleash your inner gamer with our vast collection of video games. 
+                  From timeless classics to the latest releases, we've got it all. Join us and dive into the ultimate gaming experience!"
+                </h3>
+
+              </div>
+
+              <div class="clock">
+                <div class="reloj">
+                  <p class="fecha"></p>
+                  <p class="tiempo"></p>
+                </div>
+                <script src="../js/script.js"></script>
+              </div>
+
+            </div>
+
+        </main>
+
+        <footer>
+
+
+          <div id="arriba">
+            <a href="Index.html"><i class="fa-solid fa-house"></i></a>
+            <a target="_blank"href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a target="_blank"href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+            <a target="_blank"href="https://github.com/"><i class="fa-brands fa-github"></i></a>
+            <a href="aus.html"><i class="fa-solid fa-question"></i></a>
+          </div>
+          <div id="abajo"> CopyRight ©2023 Designed by Luis Angel Martínez</div>
+    
+        </footer>  
+        
+    </body>
+
+</html>
