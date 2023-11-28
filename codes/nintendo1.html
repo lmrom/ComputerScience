@@ -4,29 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nintendo</title>
-    <link rel="stylesheet" href="styles\nintendo.css">
+    <link rel="stylesheet" href="../styles/nintendo.css">
 </head>
 <body>
 
     <header class="header"> 
-
         <div class="menu container">
-            <a href="https://www.nintendo.com/es-mx/" class="nintendo">Nintendo</a>
-            <input type="checkbox" id="menu" />
-                <label for="menu">
-                    <img src="https://cdn.icon-icons.com/icons2/2596/PNG/512/hamburger_button_menu_icon_155296.png" class="menu-icono" alt="">
-                </label>
-                <nav class="navbar">
-                    <ul>
-                        <li><a href="https://www.nintendo.com/es-mx/?gad_source=1">Inicio</a></li>
-                        <li><a href="https://es-americas-support.nintendo.com/">Servicios</a></li>
-                        <li><a href="https://www.nintendo.com/es-mx/whatsnew/">Producto</a></li>
-                        <li><a href="https://es-americas-support.nintendo.com/app/answers/detail/a_id/15959/~/informaci%C3%B3n-de-contacto-de-nintendo">Contacto</a></li>
-                    </ul>
-                </nav>
-        </div>
-        
-    
+            <div class="navbar">
+                <a href="https://www.xbox.com/en-US/play" class="nintendo">Nintendo</a>
+            <ul>
+                <li><a href="../codes/Index.html">Main</a></li>
+                <li><a href="../codes/nintendo1.html">Nintendo</a></li>
+                <li><a href="../codes/xbox.html">Xbox</a></li>
+                <li><a href="../codes/aus.html">About us</a></li> 
+            </ul>
+            </div>
+
+        </div>     
+
         <div class="header-content container"> 
             <div class="header-txt">
                 <h1>Compra tu<span> juego</span> <br> favorito aqui</h1>
@@ -44,7 +39,6 @@
             </div>
         </div>
     </header> 
-
     <section class="popular container">
         <h2>Juegos populares</h2>
 
@@ -167,6 +161,60 @@
                 <input type="submit" class="btn-3" value="Enviar">
             </form>
         </div>
+    </section>
+    
+    <section>
+        <div id="relojnumerico" class="reloj" onload="cargarReloj()">
+            <!-- Acá mostraremos el reloj desde JavaScript --> 
+        </div>
+        <script>
+            function cargarReloj(){
+ 
+                // Haciendo uso del objeto Date() obtenemos la hora, minuto y segundo 
+                var fechahora = new Date();
+                var hora = fechahora.getHours(); 
+                var minuto = fechahora.getMinutes(); 
+                var segundo = fechahora.getSeconds(); 
+
+                // Variable meridiano con el valor 'AM' 
+                var meridiano = "AM";
+                
+                
+                // Si la hora es igual a 0, declaramos la hora con el valor 12 
+                if(hora == 0){
+
+                    hora = 12;
+                    
+                }
+                
+                // Si la hora es mayor a 12, restamos la hora - 12 y mostramos la variable meridiano con el valor 'PM' 
+                if(hora > 12) {
+
+                    hora = hora - 12;
+
+                    // Variable meridiano con el valor 'PM' 
+                    meridiano = "PM";
+
+                }
+                
+                // Formateamos los ceros '0' del reloj 
+                hora = (hora < 10) ? "0" + hora : hora;
+                minuto = (minuto < 10) ? "0" + minuto : minuto;
+                segundo = (segundo < 10) ? "0" + segundo : segundo;
+                
+                // Enviamos la hora a la vista HTML 
+                var tiempo = hora + ":" + minuto + ":" + segundo + " " + meridiano;    
+                document.getElementById("relojnumerico").innerText = tiempo;
+                document.getElementById("relojnumerico").textContent = tiempo;
+
+                // Cargamos el reloj a los 500 milisegundos 
+                setTimeout(cargarReloj, 500);
+                
+                }
+
+                // Ejecutamos la función 'CargarReloj' 
+                cargarReloj();
+        </script>
     </section>
 
     <footer class="footer container">
